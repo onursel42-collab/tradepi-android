@@ -13,22 +13,24 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "0.1.0"
-    }
-android {
-    defaultConfig {
-        buildConfigField(
-            "String",
-            "SUPABASE_URL",
-            "\"${project.findProperty("SUPABASE_URL")}\""
-        )
 
         buildConfigField(
             "String",
+            "SUPABASE_URL",
+            "\"${System.getenv("SUPABASE_URL")}\""
+        )
+        buildConfigField(
+            "String",
             "SUPABASE_ANON_KEY",
-            "\"${project.findProperty("SUPABASE_ANON_KEY")}\""
+            "\"${System.getenv("SUPABASE_ANON_KEY")}\""
         )
     }
-}
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -38,12 +40,24 @@ android {
         jvmTarget = "17"
     }
 
-    buildFeatures {
-        compose = true
-    }
-
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.14"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("keystore.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("KEY_ALIAS")
+            keyPassword = System.getenv("KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
+        }
     }
 }
 
@@ -53,7 +67,6 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.activity:activity-compose:1.9.1")
-
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
