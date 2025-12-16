@@ -1,2 +1,2 @@
-# tradepi-android
-TradePi B2B Showroom – Manufacturers &amp; Buyers (Android Kotlin + Supabase
+TradePi B2B Showroom – Manufacturers & Buyers
+Native Android (Kotlin) + Supabase
