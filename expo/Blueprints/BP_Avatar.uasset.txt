@@ -1,0 +1,3 @@
+# Placeholder Blueprint Actor dosyası
+# BP_Avatar: Avatar karakterlerinin temel hareket kabiliyetleri ve mantığı.
+# Gerçek blueprint Unreal Engine ile oluşturulacaktır.

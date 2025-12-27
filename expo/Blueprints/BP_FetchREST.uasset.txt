@@ -1,0 +1,3 @@
+# Placeholder Blueprint Utility dosyası
+# BP_FetchREST: Bir REST API'den veri çekme mantığının Unreal Engine ile gösterimi.
+# Gerçek blueprint Unreal Engine ile blueprints kısmından eklenecek.

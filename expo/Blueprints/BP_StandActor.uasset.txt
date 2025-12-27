@@ -1,0 +1,3 @@
+# Placeholder Blueprint Actor dosyası
+# BP_StandActor: Firma standlarının mantığını kapsayacak Blueprint.
+# Dosya Unreal Engine'de oluşturulup gerçek .uasset olarak eklenmeli.

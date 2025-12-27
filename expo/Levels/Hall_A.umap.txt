@@ -1,0 +1,3 @@
+# Placeholder Unreal Level (Harita) dosyası
+# Hall_A.umap: Ana fuar salonu-A. Kullanıcılar ve standlar burada olacak.
+# Gerçek .umap dosyası, Unreal Editor'de oluşturulup buraya eklenecektir.

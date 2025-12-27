@@ -1,0 +1,9 @@
+# Supabase Rest API örnek çağrısı (Unreal Engine için):
+# Gerçek Blueprint veya C++ Bloğunda kullanılmak üzere başlangıç noktasıdır.
+#
+# Example request (Blueprint):
+# URL: https://your-supabase-url/rest/v1/products
+# Method: GET
+# Header: apikey, Authorization
+#
+# Bu dosya, Unreal Engine'de HTTP Request kullanımı örneği için doldurulacaktır.

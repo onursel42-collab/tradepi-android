@@ -1,28 +1,11 @@
-# Expo City (Unreal Engine 8D) - Proje Mimari ve API
+# Expo Unreal Engine Başlangıç Yapısı
 
-## Genel Bakış
-Bu dizin, Unreal Engine 8D ile geliştirilecek olan Expo City projesinin mimarisini, asset şemasını ve Supabase REST API ile entegrasyon sürecini açıklamaktadır.
+Bu klasör, Unreal Engine üzerinden şehir/fuar ortamı, standlar, ürünler ve avatarlar için örnek proje başlangıç dosyalarını ve klasör düzenini içerir. Her klasör ve dosyada, Unreal Editor ile kolayca doldurulacak şekilde açıklama veya .umap/.uasset placeholder metinleri bulunmaktadır.
 
-## Dizin Yapısı
-- `/Assets` : 3D modeller, ses ve materyaller
-- `/Blueprints` : Blueprint örnekleri (aşağıda detaylı)
-- `/API` : Supabase REST API ile iletişim katmanı
+## Klasörler ve İçerikleri
+- `Assets/`: Tüm 3D modeller (Bina, stand, ürün, avatar) için placeholder klasörler
+- `Levels/`: Unreal Engine .umap (level/harita) dosyaları için açıklamalı placeholderlar
+- `Blueprints/`: Blueprint Actor ve utility dosyaları için placeholderlar
+- `API/`: Supabase REST API çağrı örnek şablonu
 
-## Asset Şeması
-Her bir asset:
-- `id` (string)
-- `type` (ör: model, texture, sound)
-- `metadata` (JSON), pozisyon, owner, vb.
-
-## Supabase REST API
-- `GET /assets` : Asset listesini döner
-- `POST /assets` : Yeni asset ekler
-- `GET /user/{id}` : Kullanıcı detayları
-
-## Blueprint Örnekleri
-Örnek: Tıklanabilir asset görüntüleyici
-
-...
-
-## Ek Notlar
-Bu doküman geliştirme süresince güncellenecektir.
+Ayrıntılar için ilgili klasör ve dosya yorumlarını inceleyin.
